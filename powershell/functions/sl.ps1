@@ -1,0 +1,20 @@
+# Creates a symbolic link from $link to $target.
+function sl {
+    param(
+        [string]$link,
+        [string]$target
+    )
+
+    if (-not (Test-Path $target)) {
+        Write-Host "Target does not exist: $target"
+        return
+    }
+
+    if (Test-Path $link) {
+        Write-Host "Link already exists: $link"
+        return
+    }
+
+    New-Item -ItemType SymbolicLink -Path $link -Target $target | Out-Null
+    Write-Host "Created symlink: $link -> $target"
+}
