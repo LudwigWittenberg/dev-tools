@@ -1,5 +1,5 @@
 # Creates a symbolic link from $link to $target.
-function sl {
+function ln {
     param(
         [string]$link,
         [string]$target
