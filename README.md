@@ -5,7 +5,7 @@ This repository contains PowerShell functions for common development tasks on Wi
 ## Functions
 
 - `mkdir`: Creates a directory if it does not already exist.
-- `ln`: Creates a symbolic link from $link to $target.
+- `ln`: Creates a symbolic link from $target to $link.
 - `touch`: Creates a file if it does not already exist, or updates the last write time if it does.
 - `rm`: Removes a file.
 - `rmdir`: Removes a directory.
@@ -36,7 +36,7 @@ cd C:\Users\<yourusername>\Documents\PowerShell\<your-profile-name>.ps1
 . "$HOME\Documents\dev-tools\PowerShell\functions\rmdir.ps1"
 . "$HOME\Documents\dev-tools\PowerShell\functions\ln.ps1"
 . "$HOME\Documents\dev-tools\PowerShell\functions\touch.ps1"
-. "$HOME\Documents\dev-tools\PowerShell\functions\cp.ps1"
+. "$HOME\Documents\dev-tools\PowerShell\functions\copy.ps1"
 ```
 
 1. Restart PowerShell:
@@ -80,7 +80,7 @@ mv "hello-world" "hello-world-2"
 Creates a symbolic link from $link to $target.
 
 ```powershell
-ln "hello-world.txt" "hello-world-2.txt"
+ln "hello-world-2.txt" "hello-world.txt"
 ```
 
 ### touch
@@ -99,10 +99,10 @@ Removes a file.
 rm "hello-world.txt"
 ```
 
-### cp
+### copy
 
 Copies a file from $source to $destination.
 
 ```powershell
-cp "hello-world.txt" "./hello-world/hello-world.txt"
+copy "hello-world.txt" "./hello-world/hello-world.txt"
 ```

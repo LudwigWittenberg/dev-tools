@@ -1,5 +1,5 @@
 # Copies a file from $source to $destination.
-function cp {
+function copy {
     param(
         [string]$source,
         [string]$destination

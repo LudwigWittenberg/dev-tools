@@ -1,12 +1,13 @@
 # Creates a symbolic link from $link to $target.
 function ln {
     param(
-        [string]$link,
-        [string]$target
+        [string]$target,
+        [string]$link
     )
 
     if (-not (Test-Path $target)) {
         Write-Host "Target does not exist: $target"
+
         return
     }
 
